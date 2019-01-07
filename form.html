@@ -6,146 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Form 3 Steps</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <style>
-        /* http://meyerweb.com/eric/tools/css/reset/ 
-        v2.0 | 20110126
-        License: none (public domain)
-        */
-        html, body, div, span, applet, object, iframe,
-        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-        a, abbr, acronym, address, big, cite, code,
-        del, dfn, em, img, ins, kbd, q, s, samp,
-        small, strike, strong, sub, sup, tt, var,
-        b, u, i, center,
-        dl, dt, dd, ol, ul, li,
-        fieldset, form, label, legend,
-        table, caption, tbody, tfoot, thead, tr, th, td,
-        article, aside, canvas, details, embed, 
-        figure, figcaption, footer, header, hgroup, 
-        menu, nav, output, ruby, section, summary,
-        time, mark, audio, video {
-            margin: 0;
-            padding: 0;
-            border: 0;
-            font-size: 100%;
-            font: inherit;
-            vertical-align: baseline;
-        }
-        /* HTML5 display-role reset for older browsers */
-        article, aside, details, figcaption, figure, 
-        footer, header, hgroup, menu, nav, section {
-            display: block;
-        }
-        body {
-            line-height: 1;
-            margin-top:50px;
-        }
-        ol, ul {
-            list-style: none;
-        }
-        blockquote, q {
-            quotes: none;
-        }
-        blockquote:before, blockquote:after,
-        q:before, q:after {
-            content: '';
-            content: none;
-        }
-        table {
-            border-collapse: collapse;
-            border-spacing: 0;
-        }
-        a {
-            text-decoration:none;
-        }
-        #form-title {
-            font-size:24px;
-            letter-spacing:0.6px;
-        }
-        .pagination-form {
-            position:relative;
-            margin:50px auto;
-            padding:0px;
-        }
-        .pagination-form::before {
-            content:'';
-            position:absolute;
-            top:50%;
-            left:0px;
-            transform:translate(0,-50%);
-            height:3px;
-            width:100%;
-            background-color:#e4e4e4;
-            z-index:-2;
-        }
-        .pagination-form a {
-            display:inline-block;
-            width:50px;
-            height:50px;
-            line-height:50px;
-            border-radius:50%;
-            background-color:white;
-            border:2px solid #e4e4e4;
-            color:#000;
-            text-decoration:none;
-            font-weight:bold;
-            font-size:20px;
-        }
-        .pagination-form a.active-step {
-            background-color:#e4e4e4;
-        }
-        #toggle-tips {
-            cursor:pointer;
-            border-radius:5px;
-            padding:10px;
-            background-color:paleturquoise;
-            opacity:0.8;
-            display:inline-block;
-        }
-        .content-tips {
-            margin-top: 30px;
-            line-height:28px;
-            background-color:paleturquoise;
-            opacity:0;
-            padding:30px;
-            border-radius:5px;
-            transition:all 0.3s ease-in 0s;
-        }
-        .active-content {
-            opacity:0.8;
-        }
-        #form1 select {
-            width:100%;
-            padding:5px;
-            margin:10px 0px 40px;
-        }
-        .tab {
-            display:none;
-        }
-        .tab.active-tab {
-            display:block;
-        }
-        .form-buttons input {
-            margin:0 10px;
-            padding:8px 20px;
-            color:white;
-            border-radius:5px;
-            text-transform:capitalize;
-            border:none;
-            background-color:#316b9e;
-            cursor:pointer;
-        }
-        .form-buttons input:nth-child(2) {
-            padding:15px 20px;
-        }
-        .more-info, .why-ask, .definition {
-            background-color:#3288c6;
-            padding:4px 10px 5px;
-            color:white;
-            border-radius:5px;
-            cursor:pointer;
-        }
-    </style>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <div class="container-fluid">
@@ -156,13 +18,13 @@
                         Sondaj Dambovita
                     </h1>
                     <div class="col-md-6 ml-auto mr-auto pagination-form list-inline d-flex justify-content-between">
-                        <a href="#" title="1" class="active-step">
+                        <a href="step1" title="1" class="active-step">
                             1
                         </a>
-                        <a href="#" title="2">
+                        <a href="step2" title="2">
                             2
                         </a>
-                        <a href="#" title="3">
+                        <a href="step3" title="3">
                             3
                         </a>
                     </div>
@@ -172,8 +34,8 @@
                 </div>
             </div>
             <div class="col-12 col-md-7">
-                <div id="step-one" class="tab active-tab">
-                    <form method="post" id="form1">
+                <div id="step1" class="tab active-tab">
+                    <form method="post" id="step1">
                         <div class="question-form d-flex justify-content-between">
                             <div class="container-question">
                                 <span class="question-number">1</span>
@@ -261,7 +123,7 @@
                                 Mai multe informatii
                             </span>
                         </div>
-                        <select name="turist" id="turist">
+                        <select name="tourist" id="tourist">
                             <option value="Manastirea Dealu"> Manastirea Dealu </option>
                             <option value="Parcul Chindia"> Parcul Chindia </option>
                             <option value="Parcul Mitropoliei"> Parcul Mitropoliei </option>
@@ -270,12 +132,12 @@
                         </select>
                     </form>
                 </div>
-                <div id="step-two" class="tab">
-                    <form method="post" id="form2">
+                <div id="step2" class="tab">
+                    <form method="post" id="step2">
                     </form>
                 </div>
-                <div id="step-three" class="tab">
-                    <form method="post" id="form3">
+                <div id="step3" class="tab">
+                    <form method="post" id="step3">
                         <div class="question-form d-flex justify-content-between">
                             <div class="container-question">
                                 <span class="question-number">3</span>
@@ -291,8 +153,31 @@
                             <span class="field-name">
                                 Email<sup>*</sup>
                             </span>
-                            <input type="email" id="email-validation" name="email" value="Email" maxlength="60">
+                            <form action="" method="post">
+                                <input type="email" id="email-validation" name="email" value="Email" maxlength="60">
+                            </form>
                         </div>
+                        <div class="question-form d-flex justify-content-between">
+                            <div class="container-question">
+                                <span class="question-number"></span>
+                                <span class="question-text">
+                                    Ce atractii turistice va atrag legat de judetul Dambovita ?
+                                </span>
+                            </div>
+                            <span class="more-info">
+                                Mai multe informatii
+                            </span>
+                        </div>
+                        <form action="" method="post">
+                            <input type="checkbox" name="Parcul Mitropoliei" value="Parcul Mitropoliei"> Parcul Mitropoliei<br>
+                            <input type="checkbox" name="Parcul Chindia" value="Parcul Chindia"> Parcul Chindia<br>
+                            <input type="checkbox" name="Manastirea Dealu" value="Manastirea Dealu"> Manastirea Dealu<br>
+                            <input type="checkbox" name="Turnul Chindiei" value="Turnul Chindiei"> Turnul Chindiei<br>
+                            <input type="checkbox" name="Cheile Zanoagei" value="Cheile Zanoagei"> Cheile Zanoagei<br>
+                            <input type="checkbox" name="Satatiunea Pucioasa" value="Satatiunea Pucioasa">Satatiunea Pucioasa<br>
+                            <input type="checkbox" name="Casa Memoriala Ion Luca Caragiale" value="Casa Memoriala Ion Luca Caragiale">Casa Memoriala Ion Luca Caragiale<br>
+                            <input type="checkbox" name="Pestera Rateiului" value="Pestera Rateiului">Pestera Rateiului<br>
+                        </form>
                         <div class="question-form d-flex justify-content-between">
                             <div class="container-question">
                                 <span class="question-number">2</span>
@@ -305,15 +190,15 @@
                             </span>
                         </div>
                         <select name="last-question" id="last-question">
-                            <option value="Yes"> Yes </option>
-                            <option value="No"> No </option>
+                            <option value="Da"> Da </option>
+                            <option value="Nu"> Nu </option>
                         </select>
                     </form>
                 </div>
                 <div class="form-buttons text-center">
                     <input type="button" value="Prev Step" class="inactive" id="prev-step" rel="prev" name="prev_Step">
-                    <input type="submit" value="Next Step" class="active" name="next_Step">
-                    <input type="button" value="Reset Form" class="active" name="reset_Form">
+                    <input type="submit" value="Next Step" id="next-step" class="active" name="next_Step">
+                    <input type="button" value="Reset Form" class="active" id="refresh-form" name="reset_Form">
                 </div>
             </div>
             <div class="col-12 col-md-5 text-right">
