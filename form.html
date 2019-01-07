@@ -34,7 +34,7 @@
                 </div>
             </div>
             <div class="col-12 col-md-7">
-                <div id="step1" class="tab active-tab">
+                <div id="step1" class="form">
                     <form method="post" id="step1">
                         <div class="question-form d-flex justify-content-between">
                             <div class="container-question">
@@ -132,15 +132,15 @@
                         </select>
                     </form>
                 </div>
-                <div id="step2" class="tab">
+                <div id="step2" class="form">
                     <form method="post" id="step2">
                     </form>
                 </div>
-                <div id="step3" class="tab">
+                <div id="step3" class="form">
                     <form method="post" id="step3">
                         <div class="question-form d-flex justify-content-between">
                             <div class="container-question">
-                                <span class="question-number">3</span>
+                                <span class="question-number">5</span>
                                 <span class="question-text">
                                     Ofera-ne o adresa de email pentru a-ti oferi mai multe informatii
                                 </span>
@@ -159,7 +159,7 @@
                         </div>
                         <div class="question-form d-flex justify-content-between">
                             <div class="container-question">
-                                <span class="question-number"></span>
+                                <span class="question-number">6</span>
                                 <span class="question-text">
                                     Ce atractii turistice va atrag legat de judetul Dambovita ?
                                 </span>
@@ -168,19 +168,20 @@
                                 Mai multe informatii
                             </span>
                         </div>
-                        <form action="" method="post">
-                            <input type="checkbox" name="Parcul Mitropoliei" value="Parcul Mitropoliei"> Parcul Mitropoliei<br>
-                            <input type="checkbox" name="Parcul Chindia" value="Parcul Chindia"> Parcul Chindia<br>
-                            <input type="checkbox" name="Manastirea Dealu" value="Manastirea Dealu"> Manastirea Dealu<br>
-                            <input type="checkbox" name="Turnul Chindiei" value="Turnul Chindiei"> Turnul Chindiei<br>
-                            <input type="checkbox" name="Cheile Zanoagei" value="Cheile Zanoagei"> Cheile Zanoagei<br>
-                            <input type="checkbox" name="Satatiunea Pucioasa" value="Satatiunea Pucioasa">Satatiunea Pucioasa<br>
-                            <input type="checkbox" name="Casa Memoriala Ion Luca Caragiale" value="Casa Memoriala Ion Luca Caragiale">Casa Memoriala Ion Luca Caragiale<br>
-                            <input type="checkbox" name="Pestera Rateiului" value="Pestera Rateiului">Pestera Rateiului<br>
+                        <form action="javascript:submit();" method="post" id="checkbox-form">
+                            <span><input type="checkbox" name="Parcul Mitropoliei" value="Parcul Mitropoliei">Parcul Mitropoliei</span><br>
+                            <span><input type="checkbox" name="Parcul Chindia" value="Parcul Chindia"> Parcul Chindia</span><br>
+                            <span><input type="checkbox" name="Manastirea Dealu" value="Manastirea Dealu"> Manastirea Dealu</span><br>
+                            <span><input type="checkbox" name="Manastirea Dealu" value="Manastirea Dealu"> Manastirea Dealu</span><br>
+                            <span><input type="checkbox" name="Turnul Chindiei" value="Turnul Chindiei">  Turnul Chindiei</span><br>
+                            <span><input type="checkbox" name="Cheile Zanoagei" value="Cheile Zanoagei"> Cheile Zanoagei</span><br>
+                            <span><input type="checkbox" name="Satatiunea Pucioasa" value="Satatiunea Pucioasa">Satatiunea Pucioasa</span><br>
+                            <span><input type="checkbox" name="Casa Memoriala Ion Luca Caragiale" value="Casa Memoriala Ion Luca Caragiale">Casa Memoriala Ion Luca Caragiale</span><br>
+                            <span><input type="checkbox" name="Pestera Rateiului" value="Pestera Rateiului">Pestera Rateiului</span><br>
                         </form>
                         <div class="question-form d-flex justify-content-between">
                             <div class="container-question">
-                                <span class="question-number">2</span>
+                                <span class="question-number">7</span>
                                 <span class="question-text">
                                     Ti-a fost de folos sondajul?
                                 </span>
@@ -196,9 +197,9 @@
                     </form>
                 </div>
                 <div class="form-buttons text-center">
-                    <input type="button" value="Prev Step" class="inactive" id="prev-step" rel="prev" name="prev_Step">
-                    <input type="submit" value="Next Step" id="next-step" class="active" name="next_Step">
-                    <input type="button" value="Reset Form" class="active" id="refresh-form" name="reset_Form">
+                    <input type="button" value="Prev Step" id="prev-step" rel="prev" name="prev_Step">
+                    <input type="submit" value="Next Step" id="next-step" class="active"   rel="next" name="next_Step">
+                    <input type="button" value="Reset Form" id="refresh-form" class="active" rel="reset" name="reset_Form">
                 </div>
             </div>
             <div class="col-12 col-md-5 text-right">
