@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Form 3 Steps</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        /* http://meyerweb.com/eric/tools/css/reset/ 
+        v2.0 | 20110126
+        License: none (public domain)
+        */
+
+        html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, embed, 
+        figure, figcaption, footer, header, hgroup, 
+        menu, nav, output, ruby, section, summary,
+        time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+        /* HTML5 display-role reset for older browsers */
+        article, aside, details, figcaption, figure, 
+        footer, header, hgroup, menu, nav, section {
+            display: block;
+        }
+        body {
+            line-height: 1;
+            margin-top:50px;
+        }
+        ol, ul {
+            list-style: none;
+        }
+        blockquote, q {
+            quotes: none;
+        }
+        blockquote:before, blockquote:after,
+        q:before, q:after {
+            content: '';
+            content: none;
+        }
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+        a {
+            text-decoration:none;
+        }
+        #form-title {
+            font-size:24px;
+        }
+        .pagination-form {
+            margin:50px auto;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 text-center">
+                <div id="form">
+                    <h1 id="form-title">
+                        Eldercare Financial Assistance Locator
+                    </h1>
+                    <ul class="col-8 ml-auto mr-auto pagination-form list-inline d-flex justify-content-around">
+                        <li class="list-inline-item">
+                            <a href="#" title="1">
+                                1
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" title="2">
+                                2
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" title="3">
+                                3
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="current-step">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-7">
+                <div class="step-one">
+                    
+                </div>
+                <div class="step-two">
+
+                </div>
+                <div class="step-three">
+                    
+                </div>
+            </div>
+            <div class="col-12 col-md-5">
+                <div class="toggle-tips">
+                    Show / Hide Tips
+                </div>
+            </div>
+            <div class="col-12">
+                <input type="button" value="Prev Step" class="inactive" id="prev-step" value="Prev Step" rel="prev">
+                <input type="submit" value="Next Step" class="active">
+            </div>
+        </div> 
+    </div>
+  </body>
+</html>
