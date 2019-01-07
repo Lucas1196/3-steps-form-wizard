@@ -31,20 +31,19 @@ function showPage(n) {
     else {
         document.getElementById("prev-step").classList.add("active");
     }
+    if (n == (x.length - 1)) {
+        document.getElementById("next-step").value = "Submit";
+    } 
+    else {
+        document.getElementById("next-step").value = "Next Step";
+    }
+    stepIndicator(n);
 }
 
-
-
-//Button Next Page
-// var nextPage = document.getElementById("next-page");
-
-// nextPage.addEventListener("click", function() {
-
-// })
-
-//Button Prev Page
-// var prevPage = document.getElementById("prev-page");
-
-// prevPage.addEventListener("click", function() {
-
-// })
+function stepIndicator(n) {
+    var i, x = document.getElementsByClassName("step");
+    for (i = 0; i < x.length; i++) {
+      x[i].className = x[i].className.replace("active-step", "");
+    }
+    x[n].className += " active-step";
+}
