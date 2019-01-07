@@ -18,6 +18,9 @@ refreshPage.addEventListener("click", function(){
 });
 
 
+// Pana aici a fost munca mea 100%, dupaia m-am ajutat de un exemplu.
+
+
 // Showing the page to the screen and how button prev looks
 var currentPage = 0;
 showPage(currentPage);
