@@ -4,6 +4,9 @@ var toggleButton = document.getElementById("toggle-tips");
 toggleButton.addEventListener("click", function() {
     var content = document.getElementsByClassName("content-tips")[0];
         content.classList.toggle("active-content");
+    setTimeout(function(){ 
+       content.classList.remove("active-content");
+    }, 2000);
 })
 
 
