@@ -28,7 +28,7 @@ $(".activator-details").click(function() {
     //We can use toggleClass too but toggle is much easier and less code
     //In this case we use toggleClass because we need of this one in the tooltip container details
     $(this).next(".tooltip-details").toggleClass("active-details");
-
+    
     //This is the part of code which hide the first container
     if($('.tooltip-details:visible').length > 1) {
         $('.tooltip-details:visible').hide();
