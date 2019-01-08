@@ -6,38 +6,49 @@ toggleButton.addEventListener("click", function() {
         content.classList.toggle("active-content");
     setTimeout(function(){ 
        content.classList.remove("active-content");
-    }, 2000);
+    }, 2500);
 })
 
 
-//Button for Reload the page to Step 1(Even if you are at Step 3 or 2, you will be redirected to Step 1)
+//Button for Reload the page to Step 1(Even if you are at Step 2 or 3, you will be redirected to Step 1)
 var refreshPage = document.getElementById("refresh-form");
-// var fade = document.getElementsByTagName("body");
 
 refreshPage.addEventListener("click", function(){
     setTimeout(function(){ 
         window.location.reload();
-    }, 1000);
+    }, 1500);
 });
 
+//Button Activator for MoreInfo, WhyAsk, Definition
+
+$(".activator-details").click(function() {
+    $(this).next(".tooltip-details").toggleClass("active-details");
+})
 
 // Pana aici a fost munca mea 100%, dupaia m-am ajutat de un exemplu.
 
 
-// Showing the page to the screen and how button prev looks
+// Showing the page to the screen and how button prev,next looks
 var currentPage = 0;
 showPage(currentPage);
 
+//Show the current step on the screen
+var page = document.getElementById("current-step");
+    page.innerHTML = currentPage + 1;
+
 function showPage(n) {
-    var x = document.getElementsByClassName("form");
-    x[n].classList.add("active-form");
+    var form = document.getElementsByClassName("form");
+    //Number of steps
+    var pageSteps = document.getElementById("number-of-steps");
+        pageSteps.innerHTML = form.length;
+    form[n].classList.add("active-form");
     if (n == 0) {
         document.getElementById("prev-step").classList.add("inactive");
     }
     else {
         document.getElementById("prev-step").classList.add("active");
     }
-    if (n == (x.length - 1)) {
+    if (n == (form.length - 1)) {
         document.getElementById("next-step").value = "Submit";
     } 
     else {
