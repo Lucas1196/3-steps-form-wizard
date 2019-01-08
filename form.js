@@ -5,7 +5,7 @@ toggleButton.addEventListener("click", function() {
     var content = document.getElementsByClassName("content-tips")[0];
         content.classList.toggle("active-content");
     setTimeout(function(){ 
-       content.classList.remove("active-content");
+        content.classList.remove("active-content");
     }, 4500);
     //Hide the container tooltip if you click on container Tips
     $(".tooltip-details").removeClass("active-details");
@@ -110,7 +110,7 @@ function validateForm() {
     var x, y, i, valid = true;
     x = document.getElementsByClassName("form");
     y = x[currentPage].getElementsByTagName("input");
-    // A loop that checks every input field in the current step
+    // A loop that checks every input field in the current tab:
     for (i = 0; i < y.length; i++) {
         // If a field is empty...
         if (y[i].value == "") {
@@ -120,7 +120,7 @@ function validateForm() {
             valid = false;
         }
     }
-    // If the valid status is true, mark the step as finished and valid
+    // If the valid status is true, mark the step as finished and valid:
     if (valid) {
         document.getElementsByClassName("step")[currentPage].className += " finish";
     }
