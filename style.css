@@ -12,12 +12,12 @@ body {
     font-size:24px;
     letter-spacing:0.6px;
 }
-.pagination-form {
+.step-indicators {
     position:relative;
     margin:50px auto;
     padding:0px;
 }
-.pagination-form::before {
+.step-indicators::before {
     content:'';
     position:absolute;
     top:50%;
@@ -28,11 +28,11 @@ body {
     background-color:#e4e4e4;
     z-index:-2;
 }
-.pagination-form a {
+.step-indicators a {
     display:inline-block;
     width:50px;
     height:50px;
-    line-height:50px;
+    line-height:45px;
     border-radius:50%;
     background-color:white;
     border:2px solid #e4e4e4;
@@ -41,8 +41,19 @@ body {
     font-weight:bold;
     font-size:20px;
 }
-.pagination-form a.active-step {
+.step-indicators a.active-step {
     background-color:#e4e4e4;
+}
+.current-step {
+    display:block;
+    text-align:center;
+}
+.step-number {
+    color:black;
+    font-weight:bold;
+    font-size:24px;
+    letter-spacing:1px;
+    margin-bottom:40px;
 }
 
 /* Content step1, step2, step3 */
@@ -110,6 +121,36 @@ form {
     border-radius:5px;
     cursor:pointer;
 }
+.container-info {
+    position:relative;
+}
+.tooltip-details {
+    position:absolute;
+    top:-20px;
+    left:200px;
+    width:400px;
+    padding:10px 20px 10px;
+    background-color:paleturquoise;
+    opacity:0.8;
+    color:black;
+    line-height:22px;
+    border-radius:5px;
+    display:none;
+}
+.active-details {
+    display:block;
+}
+.tooltip-details::before {
+    content:'';
+    position:absolute;
+    top:20px;
+    left:-10px;
+    width: 0; 
+    height: 0; 
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;  
+    border-right:10px solid paleturquoise; 
+}
 /* Form active */
 
 .form {
@@ -118,7 +159,6 @@ form {
 .form.active-form {
     display:block;
 }
-
 
 /* Buttons down-form */
 
