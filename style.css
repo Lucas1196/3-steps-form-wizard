@@ -211,8 +211,8 @@ form {
 }
 .validate-email {
     position:absolute;
-    top:13px;
-    right:-250px;
+    top:0px;
+    right:-270px;
     background-color:#f5d7d7;
     padding:7px;
     border-radius:5px;
