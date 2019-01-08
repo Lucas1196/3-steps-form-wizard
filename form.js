@@ -6,7 +6,9 @@ toggleButton.addEventListener("click", function() {
         content.classList.toggle("active-content");
     setTimeout(function(){ 
        content.classList.remove("active-content");
-    }, 2500);
+    }, 4500);
+    //Hide the container tooltip if you click on container Tips
+    $(".tooltip-details").removeClass("active-details");
 })
 
 
@@ -19,18 +21,21 @@ refreshPage.addEventListener("click", function(){
     }, 1500);
 });
 
-//Button Activator for MoreInfo, WhyAsk, Definition
 
+//Button Activator for MoreInfo, WhyAsk, Definition
 $(".activator-details").click(function() {
-    //Show Container(We use toggle because toggle add "display:block" to our element). 
+    //Show Container(We can use toggle because toggle add "display:block" to our element). 
     //We can use toggleClass too but toggle is much easier and less code
-    $(this).next(".tooltip-details").toggle();
+    //In this case we use toggleClass because we need of this one in the tooltip container details
+    $(this).next(".tooltip-details").toggleClass("active-details");
 
     //This is the part of code which hide the first container
     if($('.tooltip-details:visible').length > 1) {
         $('.tooltip-details:visible').hide();
         $(this).next().show();
     }
+    //Removeclass Active-Content from the div with Tips(OtherWise will be a problem(both containers will shown one over each other))
+    $(".content-tips").removeClass("active-content");
 })
 
 // Pana aici a fost munca mea 100%, dupaia m-am ajutat de un exemplu.
