@@ -28,7 +28,7 @@ $(".activator-details").click(function() {
     //We can use toggleClass too but toggle is much easier and less code
     //In this case we use toggleClass because we need of this one in the tooltip container details
     $(this).next(".tooltip-details").toggleClass("active-details");
-    
+
     //This is the part of code which hide the first container
     if($('.tooltip-details:visible').length > 1) {
         $('.tooltip-details:visible').hide();
@@ -51,10 +51,11 @@ var page = document.getElementById("current-step");
 
 function showPage(n) {
     var form = document.getElementsByClassName("form");
+        form[n].style.display = "block";
     //Number of steps
     var pageSteps = document.getElementById("number-of-steps");
         pageSteps.innerHTML = form.length;
-    form[n].classList.add("active-form");
+        // form[n].classList.add("active-form");
     if (n == 0) {
         document.getElementById("prev-step").classList.add("inactive");
     }
@@ -68,6 +69,47 @@ function showPage(n) {
         document.getElementById("next-step").value = "Next Step";
     }
     stepIndicator(n);
+}
+
+function nextPrev(n) {
+    // This function will figure out which tab to display
+    var x = document.getElementsByClassName("form");
+    // Exit the function if any field in the current tab is invalid:
+    if (n == 1 && !validateForm()) return false;
+    // Hide the current tab:
+    x[currentPage].style.display = "none";
+    // Increase or decrease the current tab by 1:
+    currentPage = currentPage + n;
+    // if you have reached the end of the form...
+    if (currentPage >= x.length) {
+      // ... the form gets submitted:
+      document.getElementById("regForm").submit();
+      return false;
+    }
+    // Otherwise, display the correct tab:
+    showPage(currentPage);
+  }
+  
+function validateForm() {
+    // This function deals with validation of the form fields
+    var x, y, i, valid = true;
+    x = document.getElementsByClassName("form");
+    y = x[currentPage].getElementsByTagName("input");
+    // A loop that checks every input field in the current tab:
+    for (i = 0; i < y.length; i++) {
+        // If a field is empty...
+        if (y[i].value == "") {
+            // add an "invalid" class to the field:
+            y[i].className += " invalid";
+            // and set the current valid status to false
+            valid = false;
+        }
+    }
+    // If the valid status is true, mark the step as finished and valid:
+    if (valid) {
+        document.getElementsByClassName("step")[currentPage].className += " finish";
+    }
+    return valid; // return the valid status
 }
 
 function stepIndicator(n) {
