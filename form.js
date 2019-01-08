@@ -58,19 +58,28 @@ function showPage(n) {
         pageSteps.innerHTML = form.length;
     //Fix the Previous/Next buttons
     if (n == 0) {
+        //Add class active to show you the button is inactive for that page
         document.getElementById("prev-step").classList.add("inactive");
+        //Remove class active to show you the button is inactive for that page
         document.getElementById("prev-step").classList.remove("active");
-        // document.getElementById("prev-step").disabled = "true";
+        //Disable the prev-step button if you are on the first page
+        document.getElementById("prev-step").disabled = true;
     }   
     else {
         document.getElementById("prev-step").classList.add("active");
+        //Enable the prev-step button if you are not on the first page
+        document.getElementById("prev-step").disabled = false;
     }
     if (n == (form.length - 1)) {
+        //Change value of next-step to Submit(Just for last page) for submitting the form
         document.getElementById("next-step").value = "Submit";
-        // document.getElementById("next-step").disabled = "true";
+        //Disable the next-step button if you are on last page
+        document.getElementById("next-step").disabled = true;
     } 
     else {
         document.getElementById("next-step").value = "Next Step";
+        //Enable the next-step button if you are not on last page
+        document.getElementById("next-step").disabled = false;
     }
     //Run a function that will display the correct step indicator
     stepIndicator(n);
