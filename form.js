@@ -53,10 +53,10 @@ function showPage(n) {
     // This function will display the specified form
     var form = document.getElementsByClassName("form");
         form[n].style.display = "block";
-    //Number of steps
+    //Number of steps shown in a span
     var pageSteps = document.getElementById("number-of-steps");
         pageSteps.innerHTML = form.length;
-    //Fix the Previous/Next buttons:
+    //Fix the Previous/Next buttons
     if (n == 0) {
         document.getElementById("prev-step").classList.add("inactive");
         document.getElementById("prev-step").classList.remove("active");
@@ -79,11 +79,11 @@ function showPage(n) {
 function nextPrev(n) {
     // This function will figure out which step to display
     var x = document.getElementsByClassName("form");
-    // Exit the function if any field in the current step is invalid:
+    // Exit the function if any field in the current step is invalid
     if (n == 1 && !validateForm()) return false;
     // Hide the current step:
     x[currentPage].style.display = "none";
-    // Increase or decrease the current step by 1:
+    // Increase or decrease the current step by 1
     currentPage = currentPage + n;
     page.innerHTML = currentPage + 1;
     // if you have reached the end of the form...
@@ -92,7 +92,7 @@ function nextPrev(n) {
       document.getElementById("regForm").submit();
       return false;
     }
-    // Otherwise, display the correct step:
+    // Otherwise, display the correct step
     showPage(currentPage);
   }
   
@@ -101,7 +101,7 @@ function validateForm() {
     var x, y, i, valid = true;
     x = document.getElementsByClassName("form");
     y = x[currentPage].getElementsByTagName("input");
-    // A loop that checks every input field in the current step:
+    // A loop that checks every input field in the current step
     for (i = 0; i < y.length; i++) {
         // If a field is empty...
         if (y[i].value == "") {
@@ -111,7 +111,7 @@ function validateForm() {
             valid = false;
         }
     }
-    // If the valid status is true, mark the step as finished and valid:
+    // If the valid status is true, mark the step as finished and valid
     if (valid) {
         document.getElementsByClassName("step")[currentPage].className += " finish";
     }
