@@ -25,7 +25,7 @@ refreshPage.addEventListener("click", function(){
 //Button Activator for MoreInfo, WhyAsk, Definition
 $(".activator-details").click(function() {
     //Show Container(We can use toggle because toggle add "display:block" to our element). 
-    //We can use toggleClass too but toggle is much easier and less code
+    //We can use toggleClass but toggle is much easier and less code
     //In this case we use toggleClass because we need of this one in the tooltip container details
     $(this).next(".tooltip-details").toggleClass("active-details");
 
@@ -46,28 +46,33 @@ var currentPage = 0;
 showPage(currentPage);
 
 //Show the current step on the screen
-var page = document.getElementById("current-step");
-    page.innerHTML = currentPage + 1;
+var page = document.getElementById("current-step"); // Get the span which will show the step you are at the moment
+    page.innerHTML = currentPage + 1; // Display the currentPage 
 
 function showPage(n) {
+    // This function will display the specified form
     var form = document.getElementsByClassName("form");
         form[n].style.display = "block";
     //Number of steps
     var pageSteps = document.getElementById("number-of-steps");
         pageSteps.innerHTML = form.length;
-        // form[n].classList.add("active-form");
+    //Fix the Previous/Next buttons:
     if (n == 0) {
         document.getElementById("prev-step").classList.add("inactive");
-    }
+        document.getElementById("prev-step").classList.remove("active");
+        // document.getElementById("prev-step").disabled = "true";
+    }   
     else {
         document.getElementById("prev-step").classList.add("active");
     }
     if (n == (form.length - 1)) {
         document.getElementById("next-step").value = "Submit";
+        // document.getElementById("next-step").disabled = "true";
     } 
     else {
         document.getElementById("next-step").value = "Next Step";
     }
+    //Run a function that will display the correct step indicator
     stepIndicator(n);
 }
 
@@ -80,6 +85,7 @@ function nextPrev(n) {
     x[currentPage].style.display = "none";
     // Increase or decrease the current tab by 1:
     currentPage = currentPage + n;
+    page.innerHTML = currentPage + 1;
     // if you have reached the end of the form...
     if (currentPage >= x.length) {
       // ... the form gets submitted:
@@ -113,8 +119,10 @@ function validateForm() {
 }
 
 function stepIndicator(n) {
+    // This function removes the "active-step" class of all steps
     var i, x = document.getElementsByClassName("step");
     for (i = 0; i < x.length; i++) {
+      //Adds the "active-step" class on the current step:
       x[i].className = x[i].className.replace("active-step", "");
     }
     x[n].className += " active-step";
