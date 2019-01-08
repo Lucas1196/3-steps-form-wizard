@@ -114,7 +114,7 @@ function validateForm() {
     for (i = 0; i < y.length; i++) {
         // If a field is empty...
         if (y[i].value == "") {
-            // add an "invalid" class to the field:
+            // add an "invalid" class to the div
             var validateEmail = document.getElementsByClassName("validate-email")[0];
                 validateEmail.classList.add("invalid");
             // and set the current valid status to false
