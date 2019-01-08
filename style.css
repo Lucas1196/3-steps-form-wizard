@@ -28,7 +28,7 @@ body {
     background-color:#e4e4e4;
     z-index:-2;
 }
-.step-indicators a {
+.step-indicators span {
     display:inline-block;
     width:50px;
     height:50px;
@@ -41,7 +41,7 @@ body {
     font-weight:bold;
     font-size:20px;
 }
-.step-indicators a.active-step {
+.step-indicators span.active-step {
     background-color:#e4e4e4;
 }
 .current-step {
@@ -69,13 +69,19 @@ body {
 }
 #step2 select {
     width:100%;
-    padding:5px;
+    padding:7px;
     margin:0px 0px 40px;
+    background-color:#ebebeb;
+    border-radius:3px;
+    border:none;
 }
 #step3 select {
     width:100%;
-    padding:5px;
+    padding:7px;
     margin:0px 0px 40px;
+    background-color:#ebebeb;
+    border-radius:3px;
+    border:none;
 }
 .question-form {
     margin-bottom:10px;
@@ -87,6 +93,9 @@ body {
     padding:2px 7px;
     margin-right:10px;
 }
+.required-field {
+    margin-bottom:20px;
+}
 .required-field .field-name sup {
     color:red;
     margin-right:1%;
@@ -95,7 +104,8 @@ body {
     padding:6px 10px 5px;
     width:93%;
     border-radius:3px;
-    border:1px solid gray;
+    border:none;
+    background-color:#ebebeb;
 }
 form {
     margin:0px 0px 40px;
@@ -156,8 +166,8 @@ form {
 .form {
     display:none;
 }
-.form.active-form {
-    display:block;
+input.invalid {
+    background-color: #ffdddd;
 }
 
 /* Buttons down-form */
