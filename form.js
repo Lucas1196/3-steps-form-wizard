@@ -115,7 +115,8 @@ function validateForm() {
         // If a field is empty...
         if (y[i].value == "") {
             // add an "invalid" class to the field:
-            y[i].className += " invalid";
+            var validateEmail = document.getElementsByClassName("validate-email")[0];
+                validateEmail.classList.add("invalid");
             // and set the current valid status to false
             valid = false;
         }
@@ -126,6 +127,7 @@ function validateForm() {
     }
     return valid; // return the valid status
 }
+
 
 function stepIndicator(n) {
     // This function removes the "active-step" class of all steps
