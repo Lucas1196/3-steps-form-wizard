@@ -62,7 +62,6 @@ body {
     cursor:pointer;
     width:100%;
     padding:7px;
-    margin:0px 0px 40px;
     background-color:#ebebeb;
     border-radius:3px;
     border:none;
@@ -70,7 +69,6 @@ body {
 #step2 select {
     width:100%;
     padding:7px;
-    margin:0px 0px 40px;
     background-color:#ebebeb;
     border-radius:3px;
     border:none;
@@ -78,13 +76,12 @@ body {
 #step3 select {
     width:100%;
     padding:7px;
-    margin:0px 0px 40px;
     background-color:#ebebeb;
     border-radius:3px;
     border:none;
 }
 .question-form {
-    margin-bottom:10px;
+    margin:20px 0px;
 }
 .question-number {
     color:white;
@@ -94,6 +91,7 @@ body {
     margin-right:10px;
 }
 .required-field {
+    position:relative;
     margin-bottom:20px;
 }
 .required-field .field-name sup {
@@ -166,9 +164,6 @@ form {
 .form {
     display:none;
 }
-input.invalid {
-    background-color: #ffdddd;
-}
 
 /* Buttons down-form */
 
@@ -213,4 +208,28 @@ input.invalid {
 }
 .active-content {
     opacity:0.8;
+}
+.validate-email {
+    position:absolute;
+    top:13px;
+    right:-250px;
+    background-color:#f5d7d7;
+    padding:7px;
+    border-radius:5px;
+    z-index:44;
+    display:none;
+}
+.validate-email::before {
+    content:'';
+    position:absolute;
+    top:5px;
+    left:-10px;
+    width: 0; 
+    height: 0; 
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;  
+    border-right:10px solid #f5d7d7; 
+}
+.invalid {
+    display:block;
 }
