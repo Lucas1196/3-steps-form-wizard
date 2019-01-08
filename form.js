@@ -22,7 +22,15 @@ refreshPage.addEventListener("click", function(){
 //Button Activator for MoreInfo, WhyAsk, Definition
 
 $(".activator-details").click(function() {
-    $(this).next(".tooltip-details").toggleClass("active-details");
+    //Show Container(We use toggle because toggle add "display:block" to our element). 
+    //We can use toggleClass too but toggle is much easier and less code
+    $(this).next(".tooltip-details").toggle();
+
+    //This is the part of code which hide the first container
+    if($('.tooltip-details:visible').length > 1) {
+        $('.tooltip-details:visible').hide();
+        $(this).next().show();
+    }
 })
 
 // Pana aici a fost munca mea 100%, dupaia m-am ajutat de un exemplu.
