@@ -77,13 +77,13 @@ function showPage(n) {
 }
 
 function nextPrev(n) {
-    // This function will figure out which tab to display
+    // This function will figure out which step to display
     var x = document.getElementsByClassName("form");
-    // Exit the function if any field in the current tab is invalid:
+    // Exit the function if any field in the current step is invalid:
     if (n == 1 && !validateForm()) return false;
-    // Hide the current tab:
+    // Hide the current step:
     x[currentPage].style.display = "none";
-    // Increase or decrease the current tab by 1:
+    // Increase or decrease the current step by 1:
     currentPage = currentPage + n;
     page.innerHTML = currentPage + 1;
     // if you have reached the end of the form...
@@ -92,7 +92,7 @@ function nextPrev(n) {
       document.getElementById("regForm").submit();
       return false;
     }
-    // Otherwise, display the correct tab:
+    // Otherwise, display the correct step:
     showPage(currentPage);
   }
   
@@ -101,7 +101,7 @@ function validateForm() {
     var x, y, i, valid = true;
     x = document.getElementsByClassName("form");
     y = x[currentPage].getElementsByTagName("input");
-    // A loop that checks every input field in the current tab:
+    // A loop that checks every input field in the current step:
     for (i = 0; i < y.length; i++) {
         // If a field is empty...
         if (y[i].value == "") {
