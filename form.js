@@ -98,6 +98,7 @@ function nextPrev(n) {
     // if you have reached the end of the form...
     if (currentPage >= x.length) {
       // ... the form gets submitted:
+      $(".container-loader").addClass("invalid");
       document.getElementById("regForm").submit();
       return false;
     }
@@ -123,6 +124,7 @@ function validateForm() {
     }
     // If the valid status is true, mark the step as finished and valid:
     if (valid) {
+        // $(".container-loader").addClass("invalid");        
         document.getElementsByClassName("step")[currentPage].className += " finish";
     }
     return valid; // return the valid status
