@@ -1,342 +1,153 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Form 3 Steps</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
-  </head>
-  <body>
-    <div class="container-loader"><div id="loader"><div class="loader"></div></div></div>
-    <div class="container-fluid form3steps">
-        <div class="row">
-            <div class="col-12 text-center">
-                <div id="form">
-                    <h1 id="form-title">
-                        Sondaj Dambovita
-                    </h1>
-                    <div class="col-md-6 ml-auto mr-auto step-indicators list-inline d-flex justify-content-between">
-                        <span class="step">
-                            1
-                        </span>
-                        <span class="step">
-                            2
-                        </span>
-                        <span class="step">
-                            3
-                        </span>
-                    </div>
-                    <div class="step-number">
-                        Step <span id="current-step"></span> of <span id="number-of-steps"></span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-7">
-                <form id="regForm" action="http://stirileprotv.ro" method="post">
-                    <div id="step1" class="form">
-                        <div class="question-form d-flex justify-content-between">
-                            <div class="container-question">
-                                <span class="question-number">1</span>
-                                <span class="question-text">
-                                    Care este populatia Targovistei?
-                                </span>
-                            </div>
-                        </div>
-                        <select name="population" id="population">
-                            <option value="" selected disabled hidden>Care este populatia Targovistei?</option>
-                            <option value="under 10.000"> 0 - 10.000 </option>
-                            <option value="10.000 - 30.000"> 10.000 - 30.000 </option>
-                            <option value="30.000 - 50.000"> 30.000 - 50.000 </option>
-                            <option value="50.000 - 80.000"> 50.000 - 80.000 </option>
-                            <option value="80.000 - 100.000"> 80.000 - 100.000 </option>
-                            <option value="over 100.000"> 100.000+ </option>
-                        </select>
-                        <div class="question-form d-flex justify-content-between">
-                            <div class="container-question">
-                                <span class="question-number">2</span>
-                                <span class="question-text">
-                                    Care este suprafata Targovistei?
-                                </span>
-                            </div>
-                            <span class="why-ask">
-                                De ce intrebi?
-                            </span>
-                        </div>
-                        <select name="surface" id="surface">
-                            <option value="" selected disabled hidden>Care este suprafata Targovistei?</option>
-                            <option value="79,610"> 79,610 km&sup2; </option>
-                            <option value="50.000"> 50.000 km&sup2; </option>
-                            <option value="58.232"> 58.232 km&sup2; </option>
-                            <option value="70.400"> 70.400 km&sup2; </option>
-                            <option value="84.300"> 84.300 km&sup2; </option>
-                            <option value="120.000"> 120.000 km&sup2; </option>
-                        </select>
-                        <div class="question-form d-flex justify-content-between">
-                            <div class="container-question">
-                                <span class="question-number">3</span>
-                                <span class="question-text">
-                                    Care este municipiul Targovistei?
-                                </span>
-                            </div>
-                            <div class="container-info">
-                                <span class="more-info activator-details">
-                                    Mai multe informatii
-                                </span>
-                                <div class="tooltip-details">
-                                    Târgoviște este municipiul de reședință al județului Dâmbovița, Muntenia, România, format din localitățile componente Priseaca și Târgoviște (reședința).<br><br>
-                                    Are o populație de aproximativ 79.000 de locuitori.<br>
-                                    Are o suprafață de 5.040 ha.<br><br>
-                                    Reședință domnească și capitală între 1396 și 1714, orașul a deținut mai bine de trei secole statutul de cel mai important centru economic, politico-militar și cultural-artistic al Țării Românești.<br>
-                                </div>
-                            </div>
-                        </div>
-                        <select name="municipy" id="municipy">
-                            <option value="" selected disabled hidden>Care este municipiul Targovistei?</option>
-                            <option value="Moreni"> Moreni </option>
-                            <option value="Pucioasa"> Pucioasa </option>
-                            <option value="Racari"> Racari </option>
-                            <option value="Bistrita"> Bistrita </option>
-                            <option value="Roman"> Roman </option>
-                            <option value="Nucet"> Nucet </option>
-                            <option value="Fieni"> Fieni </option>
-                        </select>
-                        <div class="question-form d-flex justify-content-between">
-                            <div class="container-question">
-                                <span class="question-number">4</span>
-                                <span class="question-text">
-                                    Care este primarul orasului Targoviste?
-                                </span>
-                            </div>
-                            <span class="definition">
-                                Definitie
-                            </span>
-                        </div>
-                        <select name="mayor" id="mayor">
-                            <option value="" selected disabled hidden>Care este primarul orasului Targoviste?</option>
-                            <option value="Cristian Daniel Stan"> Cristian Daniel Stan </option>
-                            <option value="Gabi Boriga"> Gabi Boriga </option>
-                            <option value="Daniel Gheorghe"> Daniel Gheorghe </option>
-                            <option value="Adrian Lucaveschi"> Adrian Lucaveschi </option>
-                            <option value="Ovidiu Andrei"> Ovidiu Andrei </option>
-                        </select>
-                        <div class="question-form d-flex justify-content-between">
-                            <div class="container-question">
-                                <span class="question-number">5</span>
-                                <span class="question-text">
-                                    Care este principala atractie turistica a orasului Targoviste?
-                                </span>
-                            </div>
-                            <div class="container-info">
-                                <span class="more-info activator-details">
-                                    Mai multe informatii
-                                </span>
-                                <div class="tooltip-details">
-                                    Târgoviște este municipiul de reședință al județului Dâmbovița, Muntenia, România, format din localitățile componente Priseaca și Târgoviște (reședința).<br><br>
-                                    Are o populație de aproximativ 79.000 de locuitori.<br>
-                                    Are o suprafață de 5.040 ha.<br><br>
-                                    Reședință domnească și capitală între 1396 și 1714, orașul a deținut mai bine de trei secole statutul de cel mai important centru economic, politico-militar și cultural-artistic al Țării Românești.<br>
-                                </div>
-                            </div>
-                        </div>
-                        <select name="tourist" id="tourist">
-                            <option value="" selected disabled hidden>Care este principala atractie turistica a orasului Targoviste?</option>
-                            <option value="Manastirea Dealu"> Manastirea Dealu </option>
-                            <option value="Parcul Chindia"> Parcul Chindia </option>
-                            <option value="Parcul Mitropoliei"> Parcul Mitropoliei </option>
-                            <option value="Sala Polivalenta"> Sala Polivalenta </option>
-                            <option value="Centrul Vechi"> Centrul Vechi </option>
-                        </select>
-                    </div>
-                    <div id="step2" class="form">
-                        <div class="question-form d-flex justify-content-between">
-                            <div class="container-question">
-                                <span class="question-number">6</span>
-                                <span class="question-text">
-                                    Care este populatia Targovistei?
-                                </span>
-                            </div>
-                            <span class="why-ask">
-                                De ce intrebi?
-                            </span>
-                        </div>
-                        <select name="population" id="populations">
-                            <option value="" selected disabled hidden>Care este populatia Targovistei?</option>
-                            <option value="under 10.000"> 0 - 10.000 </option>
-                            <option value="10.000 - 30.000"> 10.000 - 30.000 </option>
-                            <option value="30.000 - 50.000"> 30.000 - 50.000 </option>
-                            <option value="50.000 - 80.000"> 50.000 - 80.000 </option>
-                            <option value="80.000 - 100.000"> 80.000 - 100.000 </option>
-                            <option value="over 100.000"> 100.000+ </option>
-                        </select>
-                        <div class="question-form d-flex justify-content-between">
-                            <div class="container-question">
-                                <span class="question-number">7</span>
-                                <span class="question-text">
-                                    Care este suprafata Targovistei?
-                                </span>
-                            </div>
-                            <span class="why-ask">
-                                De ce intrebi?
-                            </span>
-                        </div>
-                        <select name="surface" id="surfaces">
-                            <option value="" selected disabled hidden>Care este suprafata Targovistei?</option>
-                            <option value="79,610"> 79,610 km&sup2; </option>
-                            <option value="50.000"> 50.000 km&sup2; </option>
-                            <option value="58.232"> 58.232 km&sup2; </option>
-                            <option value="70.400"> 70.400 km&sup2; </option>
-                            <option value="84.300"> 84.300 km&sup2; </option>
-                            <option value="120.000"> 120.000 km&sup2; </option>
-                        </select>
-                        <div class="question-form d-flex justify-content-between">
-                            <div class="container-question">
-                                <span class="question-number">8</span>
-                                <span class="question-text">
-                                    Care este municipiul Targovistei?
-                                </span>
-                            </div>
-                            <span class="more-info">
-                                Mai multe informatii
-                            </span>
-                        </div>
-                        <select name="municipy" id="municipys">
-                            <option value="" selected disabled hidden>Care este municipiul Targovistei?</option>
-                            <option value="Moreni"> Moreni </option>
-                            <option value="Pucioasa"> Pucioasa </option>
-                            <option value="Racari"> Racari </option>
-                            <option value="Bistrita"> Bistrita </option>
-                            <option value="Roman"> Roman </option>
-                            <option value="Nucet"> Nucet </option>
-                            <option value="Fieni"> Fieni </option>
-                        </select>
-                        <div class="question-form d-flex justify-content-between">
-                            <div class="container-question">
-                                <span class="question-number">9</span>
-                                <span class="question-text">
-                                    Care este primarul orasului Targoviste?
-                                </span>
-                            </div>
-                            <span class="definition">
-                                Definitie
-                            </span>
-                        </div>
-                        <select name="mayor" id="mayors">
-                            <option value="" selected disabled hidden>Care este municipiul Targovistei?</option>
-                            <option value="Cristian Daniel Stan"> Cristian Daniel Stan </option>
-                            <option value="Gabi Boriga"> Gabi Boriga </option>
-                            <option value="Daniel Gheorghe"> Daniel Gheorghe </option>
-                            <option value="Adrian Lucaveschi"> Adrian Lucaveschi </option>
-                            <option value="Ovidiu Andrei"> Ovidiu Andrei </option>
-                        </select>
-                        <div class="question-form d-flex justify-content-between">
-                            <div class="container-question">
-                                <span class="question-number">10</span>
-                                <span class="question-text">
-                                    Care este principala atractie turistica a orasului Targoviste?
-                                </span>
-                            </div>
-                            <span class="more-info">
-                                Mai multe informatii
-                            </span>
-                        </div>
-                        <select name="tourist" id="tourists">
-                            <option value="" selected disabled hidden>Care este principala atractie turistica a orasului Targoviste?</option>
-                            <option value="Manastirea Dealu"> Manastirea Dealu </option>
-                            <option value="Parcul Chindia"> Parcul Chindia </option>
-                            <option value="Parcul Mitropoliei"> Parcul Mitropoliei </option>
-                            <option value="Sala Polivalenta"> Sala Polivalenta </option>
-                            <option value="Centrul Vechi"> Centrul Vechi </option>
-                        </select>
-                    </div>
-                    <div id="step3" class="form">
-                        <div class="question-form d-flex justify-content-between">
-                            <div class="container-question">
-                                <span class="question-number">11</span>
-                                <span class="question-text">
-                                    Ofera-ne o adresa de email pentru a-ti oferi mai multe informatii
-                                </span>
-                            </div>
-                            <span class="why-ask">
-                                De ce?
-                            </span>
-                        </div>
-                        <div class="required-field">
-                            <span class="field-name">
-                                Email<sup>*</sup>
-                            </span>
-                            <input type="email" id="email-validation" name="email" maxlength="60">
-                            <div class="validate-email">
-                                Te rog! Introdu o adresa de e-mail.
-                            </div>
-                        </div>
-                        <div class="question-form d-flex justify-content-between">
-                            <div class="container-question">
-                                <span class="question-number">12</span>
-                                <span class="question-text">
-                                    Ce atractii turistice va atrag legat de judetul Dambovita ?
-                                </span>
-                            </div>
-                            <div class="container-info">
-                                <span class="more-info activator-details">
-                                    Mai multe informatii
-                                </span>
-                                <div class="tooltip-details">
-                                    Târgoviște este municipiul de reședință al județului Dâmbovița, Muntenia, România, format din localitățile componente Priseaca și Târgoviște (reședința).<br><br>
-                                    Are o populație de aproximativ 79.000 de locuitori.<br>
-                                    Are o suprafață de 5.040 ha.<br><br>
-                                    Reședință domnească și capitală între 1396 și 1714, orașul a deținut mai bine de trei secole statutul de cel mai important centru economic, politico-militar și cultural-artistic al Țării Românești.<br>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="checkbox-form">
-                            <span><input type="checkbox" name="Parcul Mitropoliei" value="Parcul Mitropoliei">Parcul Mitropoliei</span><br>
-                            <span><input type="checkbox" name="Parcul Chindia" value="Parcul Chindia"> Parcul Chindia</span><br>
-                            <span><input type="checkbox" name="Manastirea Dealu" value="Manastirea Dealu"> Manastirea Dealu</span><br>
-                            <span><input type="checkbox" name="Turnul Chindiei" value="Turnul Chindiei">  Turnul Chindiei</span><br>
-                            <span><input type="checkbox" name="Cheile Zanoagei" value="Cheile Zanoagei"> Cheile Zanoagei</span><br>
-                            <span><input type="checkbox" name="Satatiunea Pucioasa" value="Satatiunea Pucioasa">Satatiunea Pucioasa</span><br>
-                            <span><input type="checkbox" name="Casa Memoriala Ion Luca Caragiale" value="Casa Memoriala Ion Luca Caragiale">Casa Memoriala Ion Luca Caragiale</span><br>
-                            <span><input type="checkbox" name="Pestera Rateiului" value="Pestera Rateiului">Pestera Rateiului</span><br>
-                        </div>
-                        <div class="question-form d-flex justify-content-between">
-                            <div class="container-question">
-                                <span class="question-number">13</span>
-                                <span class="question-text">
-                                    Ti-a fost de folos sondajul?
-                                </span>
-                            </div>
-                            <span class="more-info">
-                                Mai multe informati
-                            </span>
-                        </div>
-                        <select name="last-question" id="last-question">
-                            <option value="" selected disabled hidden>Da / Nu</option>
-                            <option value="Da"> Da </option>
-                            <option value="Nu"> Nu </option>
-                        </select>
-                    </div>
-                </form>
-                <div class="form-buttons text-center">
-                    <input type="button" value="Prev Step" id="prev-step" rel="prev" name="prev_Step" onclick="nextPrev(-1)">
-                    <input type="submit" value="Next Step" id="next-step" class="active"   rel="next" name="next_Step" onclick="nextPrev(1)">
-                    <input type="button" value="Reset Form" id="refresh-form" class="active" rel="reset" name="reset_Form">
-                </div>
-            </div>
-            <div class="col-12 col-md-5 text-right">
-                <div id="toggle-tips">
-                    Show / Hide Tips
-                </div>
-                <div class="content-tips text-left">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sed blandit nisi, non laoreet enim. Nam ac diam ex. In porta purus condimentum est interdum gravida vitae et mi. Praesent luctus euismod imperdiet. Praesent sodales, tortor a elementum condimentum, erat nulla varius sapien, ut varius leo odio et sapien. Praesent a nibh a urna vehicula consectetur vel in lectus. Suspendisse nec eros vel ipsum tristique mattis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                </div>
-            </div>
-        </div> 
-    </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-    <script src="form.js"></script>
-  </body>
-</html>
+//Show Tips and Hide Tips functionality
+var toggleButton = document.getElementById("toggle-tips");
+
+toggleButton.addEventListener("click", function() {
+    var content = document.getElementsByClassName("content-tips")[0];
+        content.classList.toggle("active-content");
+    setTimeout(function(){ 
+        content.classList.remove("active-content");
+    }, 4500);
+    //Hide the container tooltip if you click on container Tips
+    $(".tooltip-details").removeClass("active-details");
+    //Condition to hide the warning when info is clicked
+    if ( $(".validate-email").hasClass("invalid") ) {
+        $(".validate-email").removeClass("invalid");
+    }
+    //Condition for Content mobile < 991.98px;
+    if (window.innerWidth < 991.98) {
+        $(".content-tips").slideToggle("slow");
+    }
+})
+
+//Button for Reload the page to Step 1(Even if you are at Step 2 or 3, you will be redirected to Step 1)
+var refreshPage = document.getElementById("refresh-form");
+
+refreshPage.addEventListener("click", function(){
+    setTimeout(function(){ 
+        window.location.reload();
+    }, 1500);
+});
+
+
+//Button Activator for MoreInfo, WhyAsk, Definition
+$(".activator-details").click(function() {
+    //Show Container(We can use toggle because toggle add "display:block" to our element). 
+    //We can use toggleClass but toggle is much easier and less code
+    //In this case we use toggleClass because we need of this one in the tooltip container details
+    $(this).next(".tooltip-details").toggleClass("active-details");
+
+    //This is the part of code which hide the first container
+    if($('.tooltip-details:visible').length > 1) {
+        $('.tooltip-details:visible').hide();
+        $(this).next().show();
+    }
+    //Removeclass Active-Content from the div with Tips(OtherWise will be a problem(both containers will shown one over each other))
+    $(".content-tips").removeClass("active-content");
+})
+// Pana aici a fost munca mea 100%, dupaia m-am ajutat de un exemplu.
+
+
+// Showing the page to the screen and how button prev,next looks
+var currentPage = 0;
+showPage(currentPage);
+
+//Show the current step on the screen
+var page = document.getElementById("current-step"); // Get the span which will show the step you are at the moment
+    page.innerHTML = currentPage + 1; // Display the currentPage 
+
+function showPage(n) {
+    // This function will display the specified form
+    var form = document.getElementsByClassName("form");
+        form[n].style.display = "block";
+    //Number of steps shown in a span
+    var pageSteps = document.getElementById("number-of-steps");
+        pageSteps.innerHTML = form.length;
+    //Fix the Previous/Next buttons
+    if (n == 0) {
+        //Add class active to show you the button is inactive for that page
+        document.getElementById("prev-step").classList.add("inactive");
+        //Remove class active to show you the button is inactive for that page
+        document.getElementById("prev-step").classList.remove("active");
+        //Disable the prev-step button if you are on the first page
+        document.getElementById("prev-step").disabled = true;
+    }   
+    else {
+        document.getElementById("prev-step").classList.add("active");
+        //Enable the prev-step button if you are not on the first page
+        document.getElementById("prev-step").disabled = false;
+    }
+    if (n == (form.length - 1)) {
+        //Change value of next-step to Submit(Just for last page) for submitting the form
+        document.getElementById("next-step").value = "Submit";
+        //Disable the next-step button if you are on last page
+        // document.getElementById("next-step").disabled = true;
+    } 
+    else {
+        document.getElementById("next-step").value = "Next Step";
+        //Enable the next-step button if you are not on last page
+        document.getElementById("next-step").disabled = false;
+    }
+    //Run a function that will display the correct step indicator
+    stepIndicator(n);
+}
+
+function nextPrev(n) {
+    // This function will figure out which step to display
+    var x = document.getElementsByClassName("form");
+    // Exit the function if any field in the current step is invalid
+    if (n == 1 && !validateForm()) return false;
+    // Hide the current step:
+    x[currentPage].style.display = "none";
+    // Increase or decrease the current step by 1
+    currentPage = currentPage + n;
+    page.innerHTML = currentPage + 1;
+    // if you have reached the end of the form...
+    if (currentPage >= x.length) {
+      // ... the form gets submitted:
+      $(".container-loader").addClass("invalid");
+      document.body.style.backgroundColor = "white";
+      document.getElementById("regForm").submit();
+      return false;
+    }
+    // Otherwise, display the correct step
+    showPage(currentPage);
+  }
+  
+function validateForm() {
+    // This function deals with validation of the form fields
+    var x, y, i, valid = true;
+    x = document.getElementsByClassName("form");
+    y = x[currentPage].getElementsByTagName("input");
+    // A loop that checks every input field in the current tab:
+    for (i = 0; i < y.length; i++) {
+        // If a field is empty...
+        if (y[i].value == "") {
+            // y[i].className += " invalid";
+            // Show the warning div which saying you don't entered an Email
+            $(".validate-email").addClass("invalid");
+            //Condition to hide the info when warning is visible
+            if ( $(".validate-email").hasClass("invalid") ) {
+                $(".content-tips").removeClass("active-content");
+            }
+            // and set the current valid status to false
+            valid = false;
+        }
+    }
+    // If the valid status is true, mark the step as finished and valid:
+    if (valid) {
+        // $(".container-loader").addClass("invalid");        
+        document.getElementsByClassName("step")[currentPage].className += " finish";
+    }
+    return valid; // return the valid status
+}
+
+
+function stepIndicator(n) {
+    // This function removes the "active-step" class of all steps
+    var i, x = document.getElementsByClassName("step");
+    for (i = 0; i < x.length; i++) {
+      //Adds the "active-step" class on the current step:
+      x[i].className = x[i].className.replace("active-step", "");
+    }
+    x[n].className += " active-step";
+}
