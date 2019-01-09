@@ -13,6 +13,10 @@ toggleButton.addEventListener("click", function() {
     if ( $(".validate-email").hasClass("invalid") ) {
         $(".validate-email").removeClass("invalid");
     }
+    //Condition for Content mobile < 991.98px;
+    if (window.innerWidth < 991.98) {
+        $(".content-tips").slideToggle("slow");
+    }
 })
 
 //Button for Reload the page to Step 1(Even if you are at Step 2 or 3, you will be redirected to Step 1)
@@ -40,7 +44,6 @@ $(".activator-details").click(function() {
     //Removeclass Active-Content from the div with Tips(OtherWise will be a problem(both containers will shown one over each other))
     $(".content-tips").removeClass("active-content");
 })
-
 // Pana aici a fost munca mea 100%, dupaia m-am ajutat de un exemplu.
 
 
@@ -124,7 +127,7 @@ function validateForm() {
             $(".validate-email").addClass("invalid");
             //Condition to hide the info when warning is visible
             if ( $(".validate-email").hasClass("invalid") ) {
-                $(".content-tips").removeClass("active-content");
+                 $(".content-tips").removeClass("active-content");
             }
             // and set the current valid status to false
             valid = false;
