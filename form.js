@@ -99,6 +99,7 @@ function nextPrev(n) {
     if (currentPage >= x.length) {
       // ... the form gets submitted:
       $(".container-loader").addClass("invalid");
+      document.body.style.backgroundColor = "white";
       document.getElementById("regForm").submit();
       return false;
     }
