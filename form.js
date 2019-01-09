@@ -9,8 +9,11 @@ toggleButton.addEventListener("click", function() {
     }, 4500);
     //Hide the container tooltip if you click on container Tips
     $(".tooltip-details").removeClass("active-details");
+    //Condition to hide the warning when info is clicked
+    if ( $(".validate-email").hasClass("invalid") ) {
+        $(".validate-email").removeClass("invalid");
+    }
 })
-
 
 //Button for Reload the page to Step 1(Even if you are at Step 2 or 3, you will be redirected to Step 1)
 var refreshPage = document.getElementById("refresh-form");
@@ -119,6 +122,10 @@ function validateForm() {
             // y[i].className += " invalid";
             // Show the warning div which saying you don't entered an Email
             $(".validate-email").addClass("invalid");
+            //Condition to hide the info when warning is visible
+            if ( $(".validate-email").hasClass("invalid") ) {
+                $(".content-tips").removeClass("active-content");
+            }
             // and set the current valid status to false
             valid = false;
         }
