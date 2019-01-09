@@ -74,7 +74,7 @@ function showPage(n) {
         //Change value of next-step to Submit(Just for last page) for submitting the form
         document.getElementById("next-step").value = "Submit";
         //Disable the next-step button if you are on last page
-        document.getElementById("next-step").disabled = true;
+        // document.getElementById("next-step").disabled = true;
     } 
     else {
         document.getElementById("next-step").value = "Next Step";
@@ -114,9 +114,9 @@ function validateForm() {
     for (i = 0; i < y.length; i++) {
         // If a field is empty...
         if (y[i].value == "") {
-            // add an "invalid" class to the div
-            var validateEmail = document.getElementsByClassName("validate-email")[0];
-                validateEmail.classList.add("invalid");
+            // y[i].className += " invalid";
+            // Show the warning div which saying you don't entered an Email
+            $(".validate-email").addClass("invalid");
             // and set the current valid status to false
             valid = false;
         }
