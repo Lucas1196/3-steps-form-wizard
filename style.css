@@ -2,10 +2,18 @@ body {
     position:relative;
     line-height: 1;
     margin:30px 0px;
+    font-family: 'Roboto', sans-serif;
+    font-weight:700;
+    letter-spacing:0.5px;
+    background-color:paleturquoise;
+    opacity:0.9;
 }
-.fade {
-    opacity:0;
-    transition:opacity 1s;
+.form3steps {
+    width:80%;
+    padding:60px;
+    margin:50px auto;
+    background-color:white;
+    border-radius:7px;
 }
 /* Top Page */
 
@@ -27,7 +35,7 @@ body {
     height:3px;
     width:100%;
     background-color:#e4e4e4;
-    z-index:-2;
+    z-index:4;
 }
 .step-indicators span {
     display:inline-block;
@@ -41,6 +49,7 @@ body {
     text-decoration:none;
     font-weight:bold;
     font-size:20px;
+    z-index:7;
 }
 .step-indicators span.active-step {
     background-color:#e4e4e4;
@@ -84,12 +93,22 @@ body {
 .question-form {
     margin:20px 0px;
 }
+.container-question {
+    position:relative;
+    padding-left:40px;
+}
 .question-number {
+    position:absolute;
+    top:0px;
+    left:0px;
     color:white;
     font-size:16px;
     background-color:#3288c6;
     padding:2px 7px;
     margin-right:10px;
+}
+.question-text {
+    line-height:22px;
 }
 .required-field {
     position:relative;
@@ -101,7 +120,7 @@ body {
 }
 .required-field #email-validation {
     padding:6px 10px 5px;
-    width:93%;
+    width:90%;
     border-radius:3px;
     border:none;
     background-color:#ebebeb;
@@ -145,6 +164,8 @@ form {
     line-height:22px;
     border-radius:5px;
     display:none;
+    font-family: 'Roboto', sans-serif;
+    font-weight:400;
 }
 .active-details {
     display:block;
@@ -200,12 +221,14 @@ form {
 }
 .content-tips {
     margin-top: 30px;
-    line-height:28px;
+    line-height:26px;
     background-color:paleturquoise;
     opacity:0;
     padding:30px;
     border-radius:5px;
     transition:all 0.3s ease-in 0s;
+    font-family: 'Roboto', sans-serif;
+    font-weight:400;
 }
 .active-content {
     opacity:0.8;
@@ -213,12 +236,14 @@ form {
 .validate-email {
     position:absolute;
     top:0px;
-    right:-270px;
+    right:-300px;
     background-color:#f5d7d7;
     padding:7px;
     border-radius:5px;
     z-index:44;
     display:none;
+    font-family: 'Roboto', sans-serif;
+    font-weight:400;
 }
 .validate-email::before {
     content:'';
