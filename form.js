@@ -122,7 +122,6 @@ function validateForm() {
     for (i = 0; i < y.length; i++) {
         // If a field is empty...
         if (y[i].value == "") {
-            // y[i].className += " invalid";
             // Show the warning div which saying you don't entered an Email
             $(".validate-email").addClass("invalid");
             //Condition to hide the info when warning is visible
@@ -135,7 +134,6 @@ function validateForm() {
     }
     // If the valid status is true, mark the step as finished and valid:
     if (valid) {
-        // $(".container-loader").addClass("invalid");        
         document.getElementsByClassName("step")[currentPage].className += " finish";
     }
     return valid; // return the valid status
