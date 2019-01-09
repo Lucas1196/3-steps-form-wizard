@@ -295,3 +295,69 @@ form {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+
+@media (max-width: 991.98px) { 
+    body {
+        margin:0px;
+    }    
+    .form3steps {
+        margin:0px;
+        padding:60px 20px;
+        width:100%;
+    }
+    .form-buttons input {
+        margin:10px 0px;
+        display:block;
+        width:100%;
+    }
+    .form-buttons input:nth-child(2) {
+        padding:10px 20px;
+    }
+    .required-field #email-validation {
+        width:100%;
+    }
+    .field-name {
+        display:block;
+        margin-bottom:10px;
+    }
+    select option {
+        width:100%;
+    }
+    .content-tips {
+        overflow:hidden;
+        display:none;
+        transition:all 0s ease-in 0s;
+        opacity:1;
+        border-radius:0px;
+    }
+    .tooltip-details {
+        position:relative;
+        top:0px;
+        left:0px;
+        width:100%;
+        border-radius:0px;
+        margin-top:25px;
+    }
+    .tooltip-details::before {
+        display:none;
+    }
+    .validate-email {
+        position:relative;
+        top:0px;
+        right:0px;
+        margin-top:20px;
+        border-radius:0px;
+        text-align:center;
+        padding:25px;
+    }
+    .validate-email::before {
+        display:none;
+    }
+    .container-info {
+        text-align:center;
+    }
+    .more-info, .why-ask, .definition {
+        width:50%;
+        margin:25px auto 0px;
+    }
+}
