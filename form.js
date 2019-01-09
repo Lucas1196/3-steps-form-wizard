@@ -111,11 +111,11 @@ function nextPrev(n) {
     }
     // Otherwise, display the correct step
     showPage(currentPage);
-  }
+}
   
 function validateForm() {
     // This function deals with validation of the form fields
-    var x, y, i, valid = true;
+    var x, y, i, z, valid = true;
     x = document.getElementsByClassName("form");
     y = x[currentPage].getElementsByTagName("input");
     // A loop that checks every input field in the current tab:
@@ -125,8 +125,8 @@ function validateForm() {
             // Show the warning div which saying you don't entered an Email
             $(".validate-email").addClass("invalid");
             //Condition to hide the info when warning is visible
-            if ( $(".validate-email").hasClass("invalid") ) {
-                 $(".content-tips").removeClass("active-content");
+            if ($(".validate-email").hasClass("invalid")) {
+                $(".content-tips").removeClass("active-content");
             }
             // and set the current valid status to false
             valid = false;
