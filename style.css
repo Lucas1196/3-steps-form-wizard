@@ -143,11 +143,16 @@ form {
 /* Container right question */
 
 .more-info, .why-ask, .definition {
+    display:inline-block;
     background-color:#3288c6;
-    padding:4px 10px 5px;
+    padding:7px 10px 5px;
     color:white;
     border-radius:5px;
     cursor:pointer;
+    font-size:13px;
+    width:160px;
+    height:25px;
+    text-align:center;
 }
 .container-info {
     position:relative;
