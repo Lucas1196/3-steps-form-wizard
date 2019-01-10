@@ -149,12 +149,12 @@ function validateForm() {
     // A loop which checks every select option in the current tab:
     for(i = 0; i < z.length; i++) {
         if(z[i].value == 0) {
-            $(".select-warning").slideDown("slow");
+            $(z[i]).next(".select-warning").slideDown();
             console.log("You haven't selected anything!");
             valid = false;
         }
-        else if (z[i].value){
-            // $(".select-warning").slideUp("slow");
+        else {
+            $(z[i]).next(".select-warning").slideUp();
             console.log("esti ok");
         }
     }
