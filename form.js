@@ -160,7 +160,7 @@ function validateForm() {
     }
     //A loop which checks every input type Checkbox in the current tab:
     for(i = 0; i < q.length; i++) {
-        if(q[i].is(':checked')) {
+        if(q[i].type == "checkbox" && q[i].is(':checked')) {
             console.log("esti ok");
         }
         else {
