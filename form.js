@@ -147,7 +147,7 @@ function validateForm() {
     }
     // A loop which checks every select option in the current tab:
     for(i = 0; i < z.length; i++) {
-        if($('.select :selected').val() == 0) {
+        if($('.select option').val() === 0) {
             $(".select-warning").slideDown("slow");
             console.log("You haven't selected anything!");
             valid = false;
