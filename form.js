@@ -91,6 +91,18 @@ function showPage(n) {
     stepIndicator(n);
 }
 
+// Function which validate the Email if it is true( if is written with )
+// function validateEmail() {
+//     var regexEmail = /\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/;
+//     var email = document.getElementById("email-validation");
+
+//     if (regexEmail.test(email.value)) {
+
+//     } else {
+        
+//     }
+// } 
+
 function nextPrev(n) {
     // This function will figure out which step to display
     var x = document.getElementsByClassName("form");
@@ -98,13 +110,13 @@ function nextPrev(n) {
     if (n == 1 && !validateForm()) return false;
     // Hide the current step:
     x[currentPage].style.display = "none";
-    // Increase or decrease the current step by 1
+    // // Increase or decrease the current step by 1
     currentPage = currentPage + n;
     page.innerHTML = currentPage + 1;
     // if you have reached the end of the form...
     if (currentPage >= x.length) {
       // ... the form gets submitted:
-      $(".container-loader").addClass("invalid");
+      $(".container-loader").addClass("d-block");
       document.body.style.backgroundColor = "white";
       document.getElementById("regForm").submit();
       return false;
@@ -116,10 +128,10 @@ function nextPrev(n) {
   
 function validateForm() {
     // This function deals with validation of the form fields
-    var x, y, i, z, valid = true;
+    var x, y, i, valid = true;
     x = document.getElementsByClassName("form");
     y = x[currentPage].getElementsByTagName("input");
-
+    z = x[currentPage].getElementsByTagName("select");
     // A loop that checks every input field in the current tab:
     for (i = 0; i < y.length; i++) {
         // If a field is empty...
@@ -134,8 +146,17 @@ function validateForm() {
             valid = false;
         }
     }
-    
-
+    for (var i = 0; i < z.length; i++) {
+        if ($(z).selectedIndex <= 0) {
+            console.log("I am 0");
+        }
+        else {
+            x[currentPage].style.display = "none";
+            // Increase or decrease the current step by 1
+            currentPage = currentPage + n;
+            page.innerHTML = currentPage + 1;
+        }
+    }
     // If the valid status is true, mark the step as finished and valid:
     if (valid) {
         document.getElementsByClassName("step")[currentPage].className += " finish";
