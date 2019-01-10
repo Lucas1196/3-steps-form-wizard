@@ -123,15 +123,14 @@ function nextPrev(n) {
     }
     // Otherwise, display the correct step
     showPage(currentPage);
-    // var z = document.getElementsByTagName("select");
 }
   
 function validateForm() {
     // This function deals with validation of the form fields
     var x, y, i, valid = true;
-    x = document.getElementsByClassName("form");
-    y = x[currentPage].getElementsByTagName("input");
-    z = x[currentPage].getElementsByTagName("select");
+        x = document.getElementsByClassName("form");
+        y = x[currentPage].getElementsByTagName("input");
+        z = x[currentPage].getElementsByTagName("select");
     // A loop that checks every input field in the current tab:
     for (i = 0; i < y.length; i++) {
         // If a field is empty...
@@ -146,21 +145,21 @@ function validateForm() {
             valid = false;
         }
     }
-    for (var i = 0; i < z.length; i++) {
-        if ($(z).selectedIndex <= 0) {
-            console.log("I am 0");
+    // A loop which checks every select option in the current tab:
+    for(i = 0; i < z.length; i++) {
+        if($('.select :selected').val() == 0) {
+            $(".select-warning").slideDown("slow");
+            console.log("You haven't selected anything!");
+            valid = false;
         }
         else {
-            x[currentPage].style.display = "none";
-            // Increase or decrease the current step by 1
-            currentPage = currentPage + n;
-            page.innerHTML = currentPage + 1;
+            console.log("esti ok");
         }
     }
     // If the valid status is true, mark the step as finished and valid:
-    if (valid) {
-        document.getElementsByClassName("step")[currentPage].className += " finish";
-    }
+    // if (valid) {
+    //     document.getElementsByClassName("step")[currentPage].className += " finish";
+    // }
     return valid; // return the valid status
 }
 
