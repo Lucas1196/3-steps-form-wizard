@@ -149,17 +149,20 @@ function validateForm() {
     // A loop which checks every select option in the current tab:
     for(i = 0; i < z.length; i++) {
         if(z[i].value == 0) {
+            $(".select-warning").slideDown("slow");
             console.log("You haven't selected anything!");
             valid = false;
         }
-        else {
+        else if (z[i].value){
             // $(".select-warning").slideUp("slow");
             console.log("esti ok");
         }
     }
     //A loop which checks every input type Checkbox in the current tab:
     for(i = 0; i < q.length; i++) {
+        // Variable which get the length for input checked
         var checked = $("#checkbox-form input:checked").length > 0;
+        // if variable is not true ( that means no input checked ) then not submit, else if at least one input is checked, do submit
         if(!checked) {
             valid = false;
         }
