@@ -301,10 +301,11 @@ form {
     padding:10px;
     background-color:#f5d7d7;
     margin:20px 0px;
-    padding:20px 10px;
+    padding:10px;
     font-weight:400;
     text-align:center;
     display:none;
+    border-radius:3px;
 }
 @media (max-width: 991.98px) { 
     body {
