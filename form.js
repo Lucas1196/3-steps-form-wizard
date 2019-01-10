@@ -124,7 +124,10 @@ function nextPrev(n) {
     // Otherwise, display the correct step
     showPage(currentPage);
 }
-  
+// onchange Warning slide Up
+function refreshWarning(e) {
+    $(e).next(".select-warning").slideUp();
+}
 function validateForm() {
     // This function deals with validation of the form fields
     var x, y, i, valid = true;
