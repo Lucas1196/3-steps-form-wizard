@@ -131,7 +131,7 @@ function validateForm() {
         x = document.getElementsByClassName("form");
         y = x[currentPage].getElementsByTagName("input");
         z = x[currentPage].getElementsByTagName("select");
-        q = x[currentPage].getElementsByTagName("input[type='checkbox']");
+        q = x[currentPage].getElementsByTagName("input");
     // A loop that checks every input field in the current tab:
     for (i = 0; i < y.length; i++) {
         // If a field is empty...
@@ -154,12 +154,13 @@ function validateForm() {
             valid = false;
         }
         else {
+            // $(".select-warning").slideUp("slow");
             console.log("esti ok");
         }
     }
     //A loop which checks every input type Checkbox in the current tab:
     for(i = 0; i < q.length; i++) {
-        if(q[i].is(":checked")) {
+        if(q[i].is(':checked')) {
             console.log("esti ok");
         }
         else {
