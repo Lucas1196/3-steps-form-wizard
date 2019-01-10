@@ -47,14 +47,17 @@
                             </div>
                         </div>
                         <select name="population" id="population" class="select">
-                            <option label="" style="display:none;"></option>
-                            <option value="under 10.000"> 0 - 10.000 </option>
-                            <option value="10.000 - 30.000"> 10.000 - 30.000 </option>
-                            <option value="30.000 - 50.000"> 30.000 - 50.000 </option>
-                            <option value="50.000 - 80.000"> 50.000 - 80.000 </option>
-                            <option value="80.000 - 100.000"> 80.000 - 100.000 </option>
-                            <option value="over 100.000"> 100.000+ </option>
+                            <option value="0" selected disabled hidden>Care este populatia Targovistei?</option>
+                            <option value="1"> 0 - 10.000 </option>
+                            <option value="2"> 10.000 - 30.000 </option>
+                            <option value="3"> 30.000 - 50.000 </option>
+                            <option value="4"> 50.000 - 80.000 </option>
+                            <option value="5"> 80.000 - 100.000 </option>
+                            <option value="6"> 100.000+ </option>
                         </select>
+                        <div class="select-warning">
+                            Selecteaza o optiune ca sa poti ajunge in urmatorul pas
+                        </div>
                         <div class="question-form d-flex justify-content-between flex-column flex-lg-row">
                             <div class="container-question">
                                 <span class="question-number">2</span>
@@ -67,19 +70,22 @@
                             </span>
                         </div>
                         <select name="surface" id="surface" class="select">
-                            <option label="" style="display:none;"></option>
-                            <option value="79,610"> 79,610 km&sup2; </option>
-                            <option value="50.000"> 50.000 km&sup2; </option>
-                            <option value="58.232"> 58.232 km&sup2; </option>
-                            <option value="70.400"> 70.400 km&sup2; </option>
-                            <option value="84.300"> 84.300 km&sup2; </option>
-                            <option value="120.000"> 120.000 km&sup2; </option>
+                            <option value="0" selected disabled hidden>Care este suprafata Targovistei?</option>
+                            <option value="1"> 79,610 km&sup2; </option>
+                            <option value="2"> 50.000 km&sup2; </option>
+                            <option value="3"> 58.232 km&sup2; </option>
+                            <option value="4"> 70.400 km&sup2; </option>
+                            <option value="5"> 84.300 km&sup2; </option>
+                            <option value="6"> 120.000 km&sup2; </option>
                         </select>
+                        <div class="select-warning">
+                            Selecteaza o optiune ca sa poti ajunge in urmatorul pas
+                        </div>
                         <div class="question-form d-flex justify-content-between flex-column flex-lg-row">
                             <div class="container-question">
                                 <span class="question-number">3</span>
                                 <span class="question-text">
-                                    Care este municipiul Targovistei?
+                                    Care este municipiul Dambovitei?
                                 </span>
                             </div>
                             <div class="container-info">
@@ -93,15 +99,19 @@
                             </div>
                         </div>
                         <select name="municipy" id="municipy" class="select">
-                            <option label="" style="display:none;"></option>
-                            <option value="Moreni"> Moreni </option>
-                            <option value="Pucioasa"> Pucioasa </option>
-                            <option value="Racari"> Racari </option>
-                            <option value="Bistrita"> Bistrita </option>
-                            <option value="Roman"> Roman </option>
-                            <option value="Nucet"> Nucet </option>
-                            <option value="Fieni"> Fieni </option>
+                            <option value="0" selected disabled hidden>Care este municipiul Dambovitei?</option>
+                            <option value="1"> Moreni </option>
+                            <option value="2"> Pucioasa </option>
+                            <option value="3"> Racari </option>
+                            <option value="4"> Bistrita </option>
+                            <option value="5"> Roman </option>
+                            <option value="6"> Nucet </option>
+                            <option value="7"> Fieni </option>
+                            <option value="8"> Targoviste </option>
                         </select>
+                        <div class="select-warning">
+                            Selecteaza o optiune ca sa poti ajunge in urmatorul pas
+                        </div>
                         <div class="question-form d-flex justify-content-between flex-column flex-lg-row">
                             <div class="container-question">
                                 <span class="question-number">4</span>
@@ -114,13 +124,16 @@
                             </span>
                         </div>
                         <select name="mayor" id="mayor" class="select">
-                            <option label="" style="display:none;"></option>
-                            <option value="Cristian Daniel Stan"> Cristian Daniel Stan </option>
-                            <option value="Gabi Boriga"> Gabi Boriga </option>
-                            <option value="Daniel Gheorghe"> Daniel Gheorghe </option>
-                            <option value="Adrian Lucaveschi"> Adrian Lucaveschi </option>
-                            <option value="Ovidiu Andrei"> Ovidiu Andrei </option>
+                            <option value="0" selected disabled hidden>Care este primarul orasului Targoviste?</option>
+                            <option value="1"> Cristian Daniel Stan </option>
+                            <option value="2"> Gabi Boriga </option>
+                            <option value="3"> Daniel Gheorghe </option>
+                            <option value="4"> Adrian Lucaveschi </option>
+                            <option value="5"> Ovidiu Andrei </option>
                         </select>
+                        <div class="select-warning">
+                            Selecteaza o optiune ca sa poti ajunge in urmatorul pas
+                        </div>
                         <div class="question-form d-flex justify-content-between flex-column flex-lg-row">
                             <div class="container-question">
                                 <span class="question-number">5</span>
@@ -139,13 +152,16 @@
                             </div>
                         </div>
                         <select name="tourist" id="tourist" class="select">
-                            <option label="" style="display:none;"></option>
-                            <option value="Manastirea Dealu"> Manastirea Dealu </option>
-                            <option value="Parcul Chindia"> Parcul Chindia </option>
-                            <option value="Parcul Mitropoliei"> Parcul Mitropoliei </option>
-                            <option value="Sala Polivalenta"> Sala Polivalenta </option>
-                            <option value="Centrul Vechi"> Centrul Vechi </option>
+                            <option value="0" selected disabled hidden>Care este principala atractie turistica a orasului Targoviste?</option>
+                            <option value="1"> Manastirea Dealu </option>
+                            <option value="2"> Parcul Chindia </option>
+                            <option value="3"> Parcul Mitropoliei </option>
+                            <option value="4"> Sala Polivalenta </option>
+                            <option value="5"> Centrul Vechi </option>
                         </select>
+                        <div class="select-warning">
+                            Selecteaza o optiune ca sa poti ajunge in urmatorul pas
+                        </div>
                     </div>
                     <div id="step2" class="form">
                         <div class="question-form d-flex justify-content-between flex-column flex-lg-row">
@@ -160,14 +176,17 @@
                             </span>
                         </div>
                         <select name="population" id="populations" class="select">
-                            <option label="" style="display:none;"></option>
-                            <option value="under 10.000"> 0 - 10.000 </option>
-                            <option value="10.000 - 30.000"> 10.000 - 30.000 </option>
-                            <option value="30.000 - 50.000"> 30.000 - 50.000 </option>
-                            <option value="50.000 - 80.000"> 50.000 - 80.000 </option>
-                            <option value="80.000 - 100.000"> 80.000 - 100.000 </option>
-                            <option value="over 100.000"> 100.000+ </option>
+                            <option value="0" selected disabled hidden>Care este populatia Targovistei?</option>
+                            <option value="1"> 0 - 10.000 </option>
+                            <option value="2"> 10.000 - 30.000 </option>
+                            <option value="3"> 30.000 - 50.000 </option>
+                            <option value="4"> 50.000 - 80.000 </option>
+                            <option value="5"> 80.000 - 100.000 </option>
+                            <option value="6"> 100.000+ </option>
                         </select>
+                        <div class="select-warning">
+                            Selecteaza o optiune ca sa poti ajunge in urmatorul pas
+                        </div>
                         <div class="question-form d-flex justify-content-between flex-column flex-lg-row">
                             <div class="container-question">
                                 <span class="question-number">7</span>
@@ -180,19 +199,22 @@
                             </span>
                         </div>
                         <select name="surface" id="surfaces" class="select"> 
-                            <option label="" style="display:none;"></option>
-                            <option value="79,610"> 79,610 km&sup2; </option>
-                            <option value="50.000"> 50.000 km&sup2; </option>
-                            <option value="58.232"> 58.232 km&sup2; </option>
-                            <option value="70.400"> 70.400 km&sup2; </option>
-                            <option value="84.300"> 84.300 km&sup2; </option>
-                            <option value="120.000"> 120.000 km&sup2; </option>
+                            <option value="0" selected disabled hidden>Care este suprafata Targovistei?</option>
+                            <option value="1"> 79,610 km&sup2; </option>
+                            <option value="2"> 50.000 km&sup2; </option>
+                            <option value="3"> 58.232 km&sup2; </option>
+                            <option value="4"> 70.400 km&sup2; </option>
+                            <option value="5"> 84.300 km&sup2; </option>
+                            <option value="6"> 120.000 km&sup2; </option>
                         </select>
+                        <div class="select-warning">
+                            Selecteaza o optiune ca sa poti ajunge in urmatorul pas
+                        </div>
                         <div class="question-form d-flex justify-content-between flex-column flex-lg-row">
                             <div class="container-question">
                                 <span class="question-number">8</span>
                                 <span class="question-text">
-                                    Care este municipiul Targovistei?
+                                    Care este municipiul Dambovitei?
                                 </span>
                             </div>
                             <span class="more-info">
@@ -200,15 +222,19 @@
                             </span>
                         </div>
                         <select name="municipy" id="municipys" class="select">
-                            <option label="" style="display:none;"></option>
-                            <option value="Moreni"> Moreni </option>
-                            <option value="Pucioasa"> Pucioasa </option>
-                            <option value="Racari"> Racari </option>
-                            <option value="Bistrita"> Bistrita </option>
-                            <option value="Roman"> Roman </option>
-                            <option value="Nucet"> Nucet </option>
-                            <option value="Fieni"> Fieni </option>
+                            <option value="0" selected disabled hidden>Care este municipiul Dambovitei?</option>
+                            <option value="1"> Moreni </option>
+                            <option value="2"> Pucioasa </option>
+                            <option value="3"> Racari </option>
+                            <option value="4"> Bistrita </option>
+                            <option value="5"> Roman </option>
+                            <option value="6"> Nucet </option>
+                            <option value="7"> Fieni </option>
+                            <option value="8"> Targoviste </option>
                         </select>
+                        <div class="select-warning">
+                            Selecteaza o optiune ca sa poti ajunge in urmatorul pas
+                        </div>
                         <div class="question-form d-flex justify-content-between flex-column flex-lg-row">
                             <div class="container-question">
                                 <span class="question-number">9</span>
@@ -221,13 +247,16 @@
                             </span>
                         </div>
                         <select name="mayor" id="mayors" class="select">
-                            <option label="" style="display:none;"></option>
-                            <option value="Cristian Daniel Stan"> Cristian Daniel Stan </option>
-                            <option value="Gabi Boriga"> Gabi Boriga </option>
-                            <option value="Daniel Gheorghe"> Daniel Gheorghe </option>
-                            <option value="Adrian Lucaveschi"> Adrian Lucaveschi </option>
-                            <option value="Ovidiu Andrei"> Ovidiu Andrei </option>
+                            <option value="0" selected disabled hidden>Care este primarul orasului Targoviste?</option>
+                            <option value="1"> Cristian Daniel Stan </option>
+                            <option value="2"> Gabi Boriga </option>
+                            <option value="3"> Daniel Gheorghe </option>
+                            <option value="4"> Adrian Lucaveschi </option>
+                            <option value="5"> Ovidiu Andrei </option>
                         </select>
+                        <div class="select-warning">
+                            Selecteaza o optiune ca sa poti ajunge in urmatorul pas
+                        </div>
                         <div class="question-form d-flex justify-content-between flex-column flex-lg-row">
                             <div class="container-question">
                                 <span class="question-number">10</span>
@@ -240,13 +269,16 @@
                             </span>
                         </div>
                         <select name="tourist" id="tourists" class="select">
-                            <option label="" style="display:none;"></option>
-                            <option value="Manastirea Dealu"> Manastirea Dealu </option>
-                            <option value="Parcul Chindia"> Parcul Chindia </option>
-                            <option value="Parcul Mitropoliei"> Parcul Mitropoliei </option>
-                            <option value="Sala Polivalenta"> Sala Polivalenta </option>
-                            <option value="Centrul Vechi"> Centrul Vechi </option>
+                            <option value="0" selected disabled hidden>Care este principala atractie turistica a orasului Targoviste?</option>
+                            <option value="1"> Manastirea Dealu </option>
+                            <option value="2"> Parcul Chindia </option>
+                            <option value="3"> Parcul Mitropoliei </option>
+                            <option value="4"> Sala Polivalenta </option>
+                            <option value="5"> Centrul Vechi </option>
                         </select>
+                        <div class="select-warning">
+                            Selecteaza o optiune ca sa poti ajunge in urmatorul pas
+                        </div>
                     </div>
                     <div id="step3" class="form">
                         <div class="question-form d-flex justify-content-between flex-sm-column flex-lg-row">
@@ -264,7 +296,7 @@
                             <span class="field-name">
                                 Email<sup>*</sup>
                             </span>
-                            <input type="email" id="email-validation" name="email" maxlength="60">
+                            <input type="email" id="email-validation" name="email" required pattern="[^@\s]+@[^@\s]+" maxlength="60">
                             <div class="validate-email">
                                 Te rog! Introdu o adresa de e-mail.
                             </div>
@@ -307,16 +339,19 @@
                                 Mai multe informati
                             </span>
                         </div>
-                        <select name="last-question" id="last-question" class="select"> 
-                            <option label="" style="display:none;"></option>
-                            <option value="Da"> Da </option>
+                        <select name="last-question" id="last-question" class="select">
+                            <option value="0" selected disabled hidden>Da/Nu</option>
+                            <option value="1"> Da </option>
                             <option value="Nu"> Nu </option>
                         </select>
+                        <div class="select-warning">
+                            Selecteaza o optiune ca sa poti ajunge in urmatorul pas
+                        </div>
                     </div>
                 </form>
                 <div class="form-buttons text-center">
                     <input type="button" value="Prev Step" id="prev-step" rel="prev" name="prev_Step" onclick="nextPrev(-1)">
-                    <input type="submit" value="Next Step" id="next-step" class="active"   rel="next" name="next_Step" onclick="nextPrev(1)">
+                    <input type="submit" value="Next Step" id="next-step" class="active" rel="next" name="next_Step" onclick="nextPrev(1)">
                     <input type="button" value="Reset Form" id="refresh-form" class="active" rel="reset" name="reset_Form">
                 </div>
             </div>
