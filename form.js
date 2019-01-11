@@ -91,18 +91,6 @@ function showPage(n) {
     stepIndicator(n);
 }
 
-// Function which validate the Email if it is true( if is written with )
-// function validateEmail() {
-//     var regexEmail = /\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/;
-//     var email = document.getElementById("email-validation");
-
-//     if (regexEmail.test(email.value)) {
-
-//     } else {
-        
-//     }
-// } 
-
 function nextPrev(n) {
     // This function will figure out which step to display
     var x = document.getElementsByClassName("form");
@@ -128,6 +116,18 @@ function nextPrev(n) {
 function refreshWarning(e) {
     $(e).next(".select-warning").slideUp();
 }
+// Function which validate the Email if it is true( if is written with @ )
+function validateEmail() {
+    var email = document.getElementById('email-validation').value;
+    var emailFilter = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailFilter.test(email)) {
+        alert('Please enter a valid e-mail address.');
+        return false;
+    }
+
+    return true;
+}
 function validateForm() {
     // This function deals with validation of the form fields
     var x, y, i, valid = true;
@@ -137,8 +137,8 @@ function validateForm() {
         q = x[currentPage].getElementsByTagName("input");
     // A loop that checks every input field in the current tab:
     for (i = 0; i < y.length; i++) {
-        // If a field is empty...
-        if (y[i].value == "") {
+        // If a field is empty and is not a valid email...
+        if ( y[i].value == "" && !validateEmail() ) {
             // Show the warning div which saying you don't entered an Email
             $(".validate-email").addClass("invalid");
             //Condition to hide the info when warning is visible
