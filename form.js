@@ -122,7 +122,6 @@ function validateEmail() {
     var emailFilter = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (!emailFilter.test(email)) {
-        alert('Please enter a valid e-mail address.');
         return false;
     }
 
@@ -130,7 +129,7 @@ function validateEmail() {
 }
 function validateForm() {
     // This function deals with validation of the form fields
-    var x, y, i, valid = true;
+    var x, y, i, z, q, valid = true;
         x = document.getElementsByClassName("form");
         y = x[currentPage].getElementsByTagName("input");
         z = x[currentPage].getElementsByTagName("select");
@@ -138,7 +137,7 @@ function validateForm() {
     // A loop that checks every input field in the current tab:
     for (i = 0; i < y.length; i++) {
         // If a field is empty and is not a valid email...
-        if ( y[i].value == "" && !validateEmail() ) {
+        if ( !validateEmail() ) {
             // Show the warning div which saying you don't entered an Email
             $(".validate-email").addClass("invalid");
             //Condition to hide the info when warning is visible
